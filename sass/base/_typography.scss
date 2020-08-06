@@ -1,7 +1,6 @@
 body{  
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
     font-size: $para-size;
@@ -11,13 +10,20 @@ body{
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
+    width: 100%;
+
+    @include respons(tab-port){
+        margin-bottom: 3rem;
+    }
     &--main{
         @include heading-text(moveInLeft, $main-heading-size, 3.5rem);
 
         @include respons(phone){
             letter-spacing: 1rem;
             font-size: 5rem;
+            margin-top: 10rem;
         }
+
     }
     
     &--sub{
@@ -59,7 +65,7 @@ body{
     }
 
     @include respons(phone){
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     &:hover{
@@ -72,10 +78,18 @@ body{
      font-size: $para-size;
      font-weight: 700;
      text-transform: uppercase;
+     @include respons(tab-port){
+         font-size: 1.3rem;
+        text-align: center;
+     }
  }
  .paragraph{
      font-size: $para-size;
      &:not(:last-child){
          margin-bottom: 3rem;
+     }
+     @include respons(tab-port){
+        text-align: justify;
+        font-size: 1.3rem;
      }
  }

@@ -9,8 +9,8 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     @include respons(phone){
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 
     }
     &__logo-box{
@@ -28,5 +28,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        width: 100%;
     }
 }

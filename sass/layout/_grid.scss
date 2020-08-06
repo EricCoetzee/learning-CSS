@@ -3,12 +3,11 @@
     margin: 0 auto;
     
     @include respons(tab-port){
-        max-width: 90rem;
+        max-width: 50rem;
+        padding: 0 3rem;
     }
 
-    @include respons(phone){
-        max-width: 32rem;
-    }
+  
     
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
@@ -49,10 +48,6 @@
             
         }
         @include respons(tab-port){
-            width: 47% !important;
-        }
-
-        @include respons(phone){
             width: 100% !important;
         }
     }
