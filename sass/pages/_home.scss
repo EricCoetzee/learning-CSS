@@ -1,0 +1,48 @@
+.section-about{
+    background-color: $background-clr;
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+
+.section-features{
+    padding: 20rem 0;
+    background-image: linear-gradient(to right, rgba($second-color, 0.8), rgba($main-color, 0.8)), url(../../img/pexels-freestocksorg-320266.jpg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+    & > *{
+    transform: skewY(7deg);
+        
+    }
+}
+
+.section-themes{
+    background-color: $background-clr;
+    padding: 25rem 0 15rem 0;
+    margin-top: -10rem;
+}
+
+.section-stories{
+    padding: 15rem 0;
+    position: relative;
+
+}
+
+.section-book{
+    padding: 15rem;
+    background-image: linear-gradient(to right bottom, $second-color, $main-color);
+}
+
+.book{
+    background-image: linear-gradient(105deg, rgba($color-light, .9) 0%, rgba($color-light, .9) 50%, transparent 50%) , url(../../img/pexels-dimitri-kuliuk-1488312.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark, .3);
+    height: 50rem;
+    &__form{
+      width: 50%;
+      padding: 6rem;  
+    }
+}

@@ -1,0 +1,96 @@
+//@mixin 
+@mixin heading-text($animation, $fs, $spacing) {
+    display: block;
+    font-size: $fs;
+    font-weight: 400;
+    letter-spacing: $spacing;
+    animation: $animation 1s ease-in-out;
+}
+
+@mixin clrfx {
+
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+//Media query manager
+
+/* 
+
+Order -> base -> typography -> general layout -> grid -> page layout -> components
+Breakpointss
+
+0 - 600px: Phone screens
+600px - 900px: tablet portrait
+900px - 1200px: tablet landscape
+[1200px - 1800px] normal code written
+1800px ++: big desktop
+
+*/
+
+
+@mixin phone-size {
+    @media (max-width: 600px) { @content; } 
+}
+
+@mixin tablet-size {
+    @media (max-width: 900px) { @content; } 
+}
+
+@mixin tablet-landscape-size {
+    @media (max-width: 1200px) { @content; } 
+}
+
+@mixin big-screen-size {
+    @media (max-width: 1800px) { @content; } 
+}
+
+
+/* 
+breakpoint choices
+
+--phone
+
+--tab-port
+
+--tab-land
+
+--big-screen
+
+ */
+
+
+ @mixin respons($breakpoint) {
+
+    @if $breakpoint == phone{
+        @media (max-width: 37.5em) { @content; } //600px
+    }
+    @if $breakpoint == tab-port{
+        @media (max-width: 56.25em) { @content; } //900px
+    }
+    @if $breakpoint == tab-land{
+        @media (max-width: 75em) { @content; } // 1200px
+    }
+
+    @if $breakpoint == original{
+        @media (max-width: 112.5em) { @content; } // 1800px
+    }
+    @if $breakpoint == big-screen{
+        @media (min-width: 112.5em) { @content; } //1800px
+    }
+
+    
+     
+ }

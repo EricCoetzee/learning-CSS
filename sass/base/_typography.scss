@@ -1,0 +1,81 @@
+body{  
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: #777;
+    font-size: $para-size;
+} 
+.heading-primary{
+    color: $color-light;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    &--main{
+        @include heading-text(moveInLeft, $main-heading-size, 3.5rem);
+
+        @include respons(phone){
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+    }
+    
+    &--sub{
+       
+        @include heading-text(moveInRight, $sub-heading-size, 1.7rem);
+        @include respons(phone){
+            letter-spacing: .5rem;
+        }
+    }
+
+}
+
+.logo-text{
+    display: block;
+    background-image: linear-gradient(to right, $main-color, darken($main-color, 35%));
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: $sub-heading-size;
+    background-clip: text;
+    color: transparent;
+}
+
+//about heading
+
+.heading-secondary{
+    font-size: $sub-heading-size;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $main-color, darken($main-color, 35%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include respons(tab-port){
+        font-size: 2.5rem;
+    }
+
+    @include respons(phone){
+        font-size: 2rem;
+    }
+
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-dark, .20);
+    }
+ }
+
+ .heading-tertairy{
+     font-size: $para-size;
+     font-weight: 700;
+     text-transform: uppercase;
+ }
+ .paragraph{
+     font-size: $para-size;
+     &:not(:last-child){
+         margin-bottom: 3rem;
+     }
+ }

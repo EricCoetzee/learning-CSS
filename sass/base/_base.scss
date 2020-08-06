@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before{
+    margin: 0; 
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{  
+    //The true size of one rem size which is equal to 10px for perfect calculation
+
+    //equation { 1 === 100 // sizepx * 100 (e.g. 10 * 100 = 1000) /  initial size which is 16px 1000 / 16 === 62.5 }
+    font-size: 62.5%; 
+
+    @include respons(tab-land){ font-size: 56.25%; }// 9px of orignal size which is 16px or 100% // 1rem is eqaul to 9px//900 /16
+
+    @include respons(tab-port){ font-size: 50%; } // 8px of orignal size which is 16px or 100% // 1rem is eqaul to 8px // 800 /16
+    
+    @include respons(big-screen){ font-size: 75%; }// 12px of orignal size which is 16px or 100% // 1rem is eqaul to 12px 1200/16
+    
+
+    
+
+
+
+}
+
+body{  
+    box-sizing: border-box; 
+    padding: 3rem;
+
+    @include respons(tab-port){ padding: 0; }
+} 
