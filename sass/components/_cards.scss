@@ -10,6 +10,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         width: 100%;
         border-radius: 3px;
@@ -123,7 +124,8 @@
         font-weight: 100;
     }
 
-    @include respons(tab-port){
+    //@include respons(tab-port){
+    @media only screen and (max-width: 56.25em),  only screen and (hover: none){
         height: auto ;
         border-radius: 3px;
         background-color: $color-light;

@@ -4,11 +4,19 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba($color-dark, .8);
     z-index: 23;
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+    background-color: rgba($color-dark, .9);
+
+    @supports(-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)){
+        -webkit-backdrop-filter: blur(20px);
+        -moz-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        
+    }
+
 
     &:target{
         opacity: 1;
@@ -42,10 +50,11 @@
     &__left{
         width: 33.333333%;
         display: table-cell;
+        vertical-align: middle;
+        padding: 1rem;
         @include respons(tab-land){
             width: 100%;
             display: inline-block;
-            padding: 1rem;
         }
 
     }
@@ -57,6 +66,7 @@
         padding: 3rem 5rem;
         @include respons(tab-land){
             width: 100%;
+            padding: .5rem 1.5rem;
             display: inline-block;
         }
     }
@@ -65,7 +75,7 @@
         display: block;
         width: 100%;
         @include respons(tab-land){
-            width: 49.8%;
+            width: 49%;
             display: inline;
         }
     }
@@ -85,6 +95,19 @@
         -webkit-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
+
+        @include respons(tab-land){
+        margin-bottom: 1rem;
+
+        -moz-column-count: 1;
+        -moz-column-gap: 0;
+        -moz-column-rule: none;
+
+        column-count: 1;
+        column-gap:0;
+        column-rule: none;
+    
+        }
     }
 
     //open state funtionality
@@ -95,7 +118,10 @@
     
     &__close{
         &:link,&:visited{
-            color:$color-dark;
+            color:$color-light-2;
+            text-align: center;
+            padding: .5rem .75rem;
+            border-radius: 45%;
             text-decoration: none;
             position: absolute;
             top: 2.5rem;
@@ -104,9 +130,12 @@
             display: inline-block;
             transition: all .2s;
             line-height: 1;
+            background-color: rgba($second-color, .5);
+            transition: all .5s;
         }
         &:hover{
             color: $main-color;
+            background-color: $color-light-2;
         }
     }
 }

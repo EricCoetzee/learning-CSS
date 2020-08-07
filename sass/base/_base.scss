@@ -31,3 +31,8 @@ body{
 
     @include respons(tab-port){ padding: 0; }
 } 
+
+::selection{
+    background-color: $main-color;
+    color: $color-light;
+}
