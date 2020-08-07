@@ -26,10 +26,27 @@
         opacity: 0;
         transition: all .5s .2s;
         transform: translate(-50%, -50%) scale(0);
+        @include respons(tab-land){
+            width: 85%;
+            display: block;
+        }
+
+        @include respons(tab-port){
+            width: 90%;
+        }
+
+        @include respons(phone){
+            width: 95%;
+        }
     }
     &__left{
         width: 33.333333%;
         display: table-cell;
+        @include respons(tab-land){
+            width: 100%;
+            display: inline-block;
+            padding: 1rem;
+        }
 
     }
 
@@ -38,11 +55,19 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+        @include respons(tab-land){
+            width: 100%;
+            display: inline-block;
+        }
     }
 
     &__img{
         display: block;
         width: 100%;
+        @include respons(tab-land){
+            width: 49.8%;
+            display: inline;
+        }
     }
 
     &__text{

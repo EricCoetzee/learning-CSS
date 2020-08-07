@@ -384,6 +384,34 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.15); }
+      .card__side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__details {
+        padding: 1rem 3rem; }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card__price-box {
+        margin-bottom: 3rem; }
+      .card__price-value {
+        font-size: 4rem; } }
 
 .composition {
   position: relative; }
@@ -478,6 +506,9 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
+  @media (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(51, 51, 51, 0.1);
@@ -503,6 +534,11 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
+  @media (max-width: 37.5em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem;
+      text-align: left; } }
 
 .form__radio-input {
   display: none; }
@@ -567,17 +603,40 @@ body {
     opacity: 0;
     transition: all .5s .2s;
     transform: translate(-50%, -50%) scale(0); }
+    @media (max-width: 75em) {
+      .popup__content {
+        width: 85%;
+        display: block; } }
+    @media (max-width: 56.25em) {
+      .popup__content {
+        width: 90%; } }
+    @media (max-width: 37.5em) {
+      .popup__content {
+        width: 95%; } }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
+    @media (max-width: 75em) {
+      .popup__left {
+        width: 100%;
+        display: inline-block;
+        padding: 1rem; } }
   .popup__right {
     width: 66.6666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 75em) {
+      .popup__right {
+        width: 100%;
+        display: inline-block; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 75em) {
+      .popup__img {
+        width: 49.8%;
+        display: inline; } }
   .popup__text {
     font-size: 1.5rem;
     margin-bottom: 5rem;
@@ -615,6 +674,11 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
   .story__shape {
     height: 15rem;
     width: 15rem;
@@ -643,6 +707,15 @@ body {
     text-transform: uppercase;
     opacity: 0;
     transition: all .5s; }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); }
+      .story__shape {
+        transform: translateX(-3rem) skewX(0); }
+      .story__img {
+        transform: translateX(-4rem) scale(1); }
+      .story__text {
+        transform: skewX(0); } }
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
@@ -905,7 +978,7 @@ body {
   margin-top: -20vh; }
   @media (max-width: 56.25em) {
     .section-about {
-      padding: 9rem 0 21rem 0; } }
+      padding: 17rem 0 21rem 0; } }
 
 .section-features {
   padding: 20rem 0;
@@ -941,7 +1014,10 @@ body {
   background-image: linear-gradient(to right bottom, #8a3d8a, #aa9a40); }
   @media (max-width: 56.25em) {
     .section-book {
-      padding: 10rem; } }
+      padding: 2rem 0; } }
+  @media (max-width: 56.25em) {
+    .section-book .row {
+      max-width: 80rem; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../img/pexels-dimitri-kuliuk-1488312.jpg);
@@ -949,6 +1025,26 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.3);
   height: 50rem; }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 70%), url(../../img/pexels-dimitri-kuliuk-1488312.jpg);
+      background-size: cover; } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%, transparent 100%), url(../../img/pexels-dimitri-kuliuk-1488312.jpg);
+      background-size: cover; } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 100%; } }
+    @media (max-width: 56.25em) {
+      .book__form {
+        padding: 3rem; }
+        .book__form .form .u-margin-bottom-med {
+          text-align: center; }
+        .book__form .form__group {
+          text-align: center; }
+          .book__form .form__group button {
+            margin: auto; } }
